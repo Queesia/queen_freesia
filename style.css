@@ -1,0 +1,196 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(120deg, #2c003e, #4b0082, #2c003e);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.wrap {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 40px;
+    color: #bf80ff;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid #ffffff;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+p {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+ul {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ff4da6;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+strong {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ccb3ff;
+}
+
+img {
+    width: 716px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: transform 0.5s;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.slide__pagenumber {
+    font-size: 20px;
+    color: white;
+}
+
+.slide__content {
+    font-size: 25px;
+    color: white;
+}
+
+a {
+    font-size: 30px;
+    color: #e8de9b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4da6;
+}
+
+iframe {
+    margin: 20px 0;
+}
+
+button {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide__item {
+    display: none;
+    animation: fadeIn 2s ease forwards;
+}
+
+.slide__arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 20px; /* 調整箭頭大小 */
+    height: 20px; /* 調整箭頭大小 */
+    padding: 16px;
+    margin-top: 50px; /* 將箭頭上邊距設為 0 */
+    margin-top: -10px; /* 修正位置，讓箭頭垂直居中 */
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+.slide__arrow--prev {
+    left: 0;
+    margin-left: 1px; /* 調整箭頭與輪播圖片的間距 */
+}
+
+.slide__arrow--next {
+    right: 0;
+    margin-right: 1px; /* 調整箭頭與輪播圖片的間距 */
+}
+
+.slide__arrow:hover {
+    color: #ff4da6;
+}
+
+.slide__dot {
+    text-align: center;
+    padding: 15px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover, .dot.active {
+    background-color: #ff4da6;
+}
